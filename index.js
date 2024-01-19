@@ -1,5 +1,5 @@
 const apiKey = 'f5b0dcf8';
-const apiUrl = 'https://www.omdbapi.com/?apikey=' + apiKey + '&t=';
+const apiUrl = 'http://www.omdbapi.com/?apikey=' + apiKey + '&t=';
 
 function searchMovie() {
     let query = document.getElementById('movieName').value.trim();
