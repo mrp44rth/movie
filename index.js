@@ -1,4 +1,4 @@
-let api = 'http://www.omdbapi.com/?apikey=f5b0dcf8&t='
+let api = 'https://www.omdbapi.com/?apikey=f5b0dcf8&t='
 function searchMovie(){
     let query = document.getElementById('movieName').value;
     let search = api + query;
