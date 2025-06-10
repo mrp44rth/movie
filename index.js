@@ -42,3 +42,19 @@ function updateMovieDetails(data) {
     document.getElementById('writers').innerText = data.Writer;
     document.getElementById('poster').src = data.Poster;
 }
+const movieContainer = document.getElementById("movieContainer");
+
+// Before setting data, reset class
+movieContainer.classList.remove("animate-fade-in-up");
+
+// Trigger animation (reflow ensures it restarts)
+void movieContainer.offsetWidth;
+movieContainer.classList.add("animate-fade-in-up");
+function animateSection() {
+    const animatables = document.querySelectorAll('.animate-fade');
+    animatables.forEach(el => {
+        el.classList.remove('animate-fade'); // Reset animation
+        void el.offsetWidth; // Trigger reflow
+        el.classList.add('animate-fade'); // Replay animation
+    });
+}
